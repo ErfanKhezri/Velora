@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("/fonts/vazirmatn-arabic-wght-normal.woff2") format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FEFC;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("/fonts/vazirmatn-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212;
+}
+
+@theme {
+  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+
+  --color-cream: #fbf7f3;
+  --color-ink: #2a1e23;
+
+  --color-blush-50: #fdf6f5;
+  --color-blush-100: #f9e9e7;
+  --color-blush-200: #f3d4d0;
+  --color-blush-300: #e9b7b1;
+  --color-blush-400: #dc958e;
+  --color-blush-500: #c97770;
+  --color-blush-600: #b0605b;
+  --color-blush-700: #8f4c4a;
+  --color-blush-800: #6f3c3c;
+  --color-blush-900: #4f2b2d;
+
+  --color-champagne-50: #fbf8f1;
+  --color-champagne-100: #f5eedc;
+  --color-champagne-200: #ebdcb8;
+  --color-champagne-300: #dec58e;
+  --color-champagne-400: #cfac6a;
+  --color-champagne-500: #b8924f;
+  --color-champagne-600: #997641;
+  --color-champagne-700: #795c35;
+  --color-champagne-800: #5a452a;
+  --color-champagne-900: #3d2f1e;
+
+  --color-plum-700: #3a2431;
+  --color-plum-800: #2a1a24;
+  --color-plum-900: #1c1219;
+  --color-plum-950: #140c12;
+
+  --radius-4xl: 2rem;
+
+  --shadow-soft: 0 12px 32px -14px rgb(143 76 74 / 0.28), 0 2px 6px -2px rgb(143 76 74 / 0.08);
+  --shadow-glow: 0 0 0 1px rgb(222 197 142 / 0.35), 0 18px 40px -16px rgb(184 146 79 / 0.45);
+
+  --animate-shimmer: shimmer 1.6s linear infinite;
+  @keyframes shimmer {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+}
+
+/* Semantic tokens that switch with the theme */
+:root {
+  --bg: var(--color-cream);
+  --surface: #fffdfb;
+  --elevated: #fbf1ee;
+  --fg: var(--color-ink);
+  --muted: #7d6a70;
+  --line: #efe3de;
+  --primary: var(--color-ink);
+  --primary-fg: var(--color-cream);
+  --accent: var(--color-champagne-500);
+  --ring: var(--color-blush-400);
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #171016;
+  --surface: #211720;
+  --elevated: #2b1f29;
+  --fg: #f6ede8;
+  --muted: #b7a4ab;
+  --line: #3a2b36;
+  --primary: var(--color-champagne-300);
+  --primary-fg: var(--color-plum-900);
+  --accent: var(--color-champagne-300);
+  --ring: var(--color-champagne-300);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-elevated: var(--elevated);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-primary: var(--primary);
+  --color-primary-fg: var(--primary-fg);
+  --color-accent: var(--accent);
+  --color-ring: var(--ring);
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01";
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+
+/* Subtle film grain over the whole page */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 0.75rem;
+}
+
+::selection {
+  background: var(--color-blush-200);
+  color: var(--color-ink);
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@utility text-gradient {
+  background: linear-gradient(120deg, var(--color-blush-600), var(--color-champagne-500) 60%, var(--color-blush-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@utility pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
