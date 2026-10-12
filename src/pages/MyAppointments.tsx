@@ -30,7 +30,7 @@ export default function MyAppointments() {
     return (
       <section className="mx-auto max-w-md px-4 py-12 sm:py-20">
         <Card className="p-6 sm:p-8">
-          <span className="mb-5 grid size-14 place-items-center rounded-2xl bg-gradient-to-br from-blush-100 to-champagne-100 text-blush-600 dark:from-white/10 dark:to-white/5 dark:text-champagne-300">
+          <span className="mb-5 grid size-14 place-items-center rounded-2xl bg-gradient-to-br from-orchid-100 to-iris-100 text-orchid-600 dark:from-white/10 dark:to-white/5 dark:text-iris-300">
             <CalendarHeart className="size-6" aria-hidden />
           </span>
           <h1 className="text-2xl font-bold">نوبت‌های من</h1>
@@ -104,7 +104,7 @@ export default function MyAppointments() {
               return (
                 <motion.div key={a.id} layout initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.04 }}>
                   <Card className="flex items-center gap-4 p-4 sm:p-5">
-                    <div className="grid w-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-b from-blush-100 to-champagne-100 py-2 text-plum-800 dark:from-white/10 dark:to-white/5 dark:text-cream">
+                    <div className="grid w-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-b from-orchid-100 to-iris-100 py-2 text-night-800 dark:from-white/10 dark:to-white/5 dark:text-mist">
                       <span className="text-2xl leading-tight font-bold">{toFa(j.date())}</span>
                       <span className="text-xs">{j.format("MMMM")}</span>
                     </div>

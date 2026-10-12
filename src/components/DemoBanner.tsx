@@ -3,14 +3,14 @@ import { SALON } from "../lib/constants";
 
 export function DemoBanner() {
   return (
-    <div className="pt-safe relative z-40 bg-gradient-to-l from-plum-800 via-plum-700 to-plum-800 text-cream">
+    <div className="pt-safe relative z-40 bg-gradient-to-l from-iris-600 via-orchid-500 to-iris-600 text-white">
       <div className="mx-auto flex max-w-6xl items-center justify-center gap-3 px-4 py-1.5 text-center text-xs">
-        <span className="text-cream/85">نسخه نمایشی — داده‌ها فقط در مرورگر شما ذخیره می‌شوند</span>
+        <span className="text-white/90">نسخه نمایشی — داده‌ها فقط در مرورگر شما ذخیره می‌شوند</span>
         <a
           href={SALON.github}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1 font-medium text-champagne-200 hover:text-champagne-100"
+          className="inline-flex items-center gap-1 font-medium text-white underline-offset-4 hover:underline"
         >
           <GithubIcon className="size-3.5" />
           <span>گیت‌هاب</span>

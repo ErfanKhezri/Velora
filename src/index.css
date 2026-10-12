@@ -21,76 +21,101 @@
 }
 
 @theme {
-  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Vazirmatn", "Vazir", ui-sans-serif, system-ui, sans-serif;
 
-  --color-cream: #fbf7f3;
-  --color-ink: #2a1e23;
+  --color-mist: #faf7ff;
+  --color-ink: #1d1534;
 
-  --color-blush-50: #fdf6f5;
-  --color-blush-100: #f9e9e7;
-  --color-blush-200: #f3d4d0;
-  --color-blush-300: #e9b7b1;
-  --color-blush-400: #dc958e;
-  --color-blush-500: #c97770;
-  --color-blush-600: #b0605b;
-  --color-blush-700: #8f4c4a;
-  --color-blush-800: #6f3c3c;
-  --color-blush-900: #4f2b2d;
+  /* Signature "Velora pink": a vivid orchid */
+  --color-orchid-50: #fff1f8;
+  --color-orchid-100: #ffe2f1;
+  --color-orchid-200: #ffc5e4;
+  --color-orchid-300: #ff98cd;
+  --color-orchid-400: #ff5fae;
+  --color-orchid-500: #f72f90;
+  --color-orchid-600: #e0137a;
+  --color-orchid-700: #b80c63;
+  --color-orchid-800: #940f53;
+  --color-orchid-900: #7a1148;
 
-  --color-champagne-50: #fbf8f1;
-  --color-champagne-100: #f5eedc;
-  --color-champagne-200: #ebdcb8;
-  --color-champagne-300: #dec58e;
-  --color-champagne-400: #cfac6a;
-  --color-champagne-500: #b8924f;
-  --color-champagne-600: #997641;
-  --color-champagne-700: #795c35;
-  --color-champagne-800: #5a452a;
-  --color-champagne-900: #3d2f1e;
+  /* Iris violet, the second brand color */
+  --color-iris-50: #f6f3ff;
+  --color-iris-100: #ede8ff;
+  --color-iris-200: #ddd4ff;
+  --color-iris-300: #c4b1ff;
+  --color-iris-400: #a685ff;
+  --color-iris-500: #8b5cf6;
+  --color-iris-600: #7a3ff0;
+  --color-iris-700: #6a2edb;
+  --color-iris-800: #5826b5;
+  --color-iris-900: #4a2394;
 
-  --color-plum-700: #3a2431;
-  --color-plum-800: #2a1a24;
-  --color-plum-900: #1c1219;
-  --color-plum-950: #140c12;
+  /* Night indigo for dark mode */
+  --color-night-700: #2a1f4d;
+  --color-night-800: #1c1538;
+  --color-night-900: #120d26;
+  --color-night-950: #0b0818;
+
+  /* A fresh aqua used only in glows */
+  --color-aqua-300: #7ee8fa;
+  --color-aqua-400: #38d6f2;
 
   --radius-4xl: 2rem;
 
-  --shadow-soft: 0 12px 32px -14px rgb(143 76 74 / 0.28), 0 2px 6px -2px rgb(143 76 74 / 0.08);
-  --shadow-glow: 0 0 0 1px rgb(222 197 142 / 0.35), 0 18px 40px -16px rgb(184 146 79 / 0.45);
+  --shadow-soft: 0 14px 34px -16px rgb(122 63 240 / 0.32), 0 2px 6px -2px rgb(224 19 122 / 0.08);
+  --shadow-glow: 0 0 0 1px rgb(255 255 255 / 0.25), 0 18px 40px -14px rgb(247 47 144 / 0.55);
 
   --animate-shimmer: shimmer 1.6s linear infinite;
   @keyframes shimmer {
     from { background-position: 200% 0; }
     to { background-position: -200% 0; }
   }
+
+  --animate-drift: drift 22s ease-in-out infinite alternate;
+  @keyframes drift {
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(6vw, 4vh, 0) scale(1.15); }
+    100% { transform: translate3d(-4vw, 8vh, 0) scale(0.95); }
+  }
 }
 
 /* Semantic tokens that switch with the theme */
 :root {
-  --bg: var(--color-cream);
-  --surface: #fffdfb;
-  --elevated: #fbf1ee;
+  --bg: var(--color-mist);
+  --surface: #ffffff;
+  --elevated: #f4effd;
   --fg: var(--color-ink);
-  --muted: #7d6a70;
-  --line: #efe3de;
-  --primary: var(--color-ink);
-  --primary-fg: var(--color-cream);
-  --accent: var(--color-champagne-500);
-  --ring: var(--color-blush-400);
+  --muted: #6c6387;
+  --line: #e9e2f6;
+  --primary: var(--color-orchid-600);
+  --primary-fg: #ffffff;
+  --accent: var(--color-iris-600);
+  --ring: var(--color-orchid-400);
+
+  /* Liquid glass */
+  --glass-tint: rgb(255 255 255 / 0.55);
+  --glass-edge: rgb(255 255 255 / 0.75);
+  --glass-shine: rgb(255 255 255 / 0.95);
+  --glass-sheen: rgb(255 255 255 / 0.45);
   color-scheme: light;
 }
 
 .dark {
-  --bg: #171016;
-  --surface: #211720;
-  --elevated: #2b1f29;
-  --fg: #f6ede8;
-  --muted: #b7a4ab;
-  --line: #3a2b36;
-  --primary: var(--color-champagne-300);
-  --primary-fg: var(--color-plum-900);
-  --accent: var(--color-champagne-300);
-  --ring: var(--color-champagne-300);
+  --bg: #0d0a1c;
+  --surface: #17112c;
+  --elevated: #211a3d;
+  --fg: #f4f0ff;
+  --muted: #b1a7cf;
+  --line: #2d2552;
+  --primary: var(--color-orchid-400);
+  --primary-fg: #ffffff;
+  --accent: var(--color-iris-400);
+  --ring: var(--color-orchid-300);
+
+  --glass-tint: rgb(36 26 72 / 0.42);
+  --glass-edge: rgb(255 255 255 / 0.14);
+  --glass-shine: rgb(255 255 255 / 0.22);
+  --glass-sheen: rgb(255 255 255 / 0.08);
   color-scheme: dark;
 }
 
@@ -139,7 +164,7 @@ body::before {
 }
 
 ::selection {
-  background: var(--color-blush-200);
+  background: var(--color-orchid-200);
   color: var(--color-ink);
 }
 
@@ -160,7 +185,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 @utility text-gradient {
-  background: linear-gradient(120deg, var(--color-blush-600), var(--color-champagne-500) 60%, var(--color-blush-400));
+  background: linear-gradient(120deg, var(--color-orchid-500), var(--color-iris-500) 55%, var(--color-aqua-400));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -172,4 +197,34 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 @utility pt-safe {
   padding-top: env(safe-area-inset-top);
+}
+
+/*
+ * iOS-style "liquid glass": a translucent tint that blurs and saturates what is
+ * behind it, a bright specular edge on top, and a soft sheen across the surface.
+ */
+@utility glass {
+  background-color: var(--glass-tint);
+  background-image: linear-gradient(140deg, var(--glass-sheen), transparent 38%, transparent 70%, var(--glass-sheen));
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid var(--glass-edge);
+  box-shadow:
+    inset 0 1px 0 0 var(--glass-shine),
+    inset 0 -1px 1px 0 rgb(255 255 255 / 0.06),
+    var(--shadow-soft);
+}
+
+/* Thinner glass for bars and small controls */
+@utility glass-thin {
+  background-color: var(--glass-tint);
+  -webkit-backdrop-filter: blur(16px) saturate(170%);
+  backdrop-filter: blur(16px) saturate(170%);
+  border-color: var(--glass-edge);
+  box-shadow: inset 0 1px 0 0 var(--glass-shine);
+}
+
+/* Brand gradient fill used for primary actions and selected states */
+@utility bg-brand {
+  background-image: linear-gradient(120deg, var(--color-orchid-500), var(--color-iris-500));
 }

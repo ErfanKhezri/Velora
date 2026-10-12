@@ -66,7 +66,7 @@ export function JalaliCalendar({ month, onMonthChange, value, onChange, statuses
 
       <div className="grid grid-cols-7 gap-1 text-center text-xs font-medium text-muted" aria-hidden>
         {WEEKDAYS_SHORT.map((d, i) => (
-          <div key={d} className={cn("py-2", i === 6 && "text-blush-500 dark:text-blush-300")}>
+          <div key={d} className={cn("py-2", i === 6 && "text-orchid-500 dark:text-orchid-300")}>
             {d}
           </div>
         ))}
@@ -90,19 +90,19 @@ export function JalaliCalendar({ month, onMonthChange, value, onChange, statuses
               aria-label={`${formatDay(date)}${statusLabel[status] ? ` — ${statusLabel[status]}` : ""}`}
               className={cn(
                 "relative flex aspect-square cursor-pointer flex-col items-center justify-center rounded-2xl text-[15px] transition-colors",
-                !disabled && !selected && "hover:bg-blush-100 dark:hover:bg-white/5",
+                !disabled && !selected && "hover:bg-orchid-100 dark:hover:bg-white/5",
                 disabled && "cursor-default text-muted/45",
                 selected && "text-primary-fg",
               )}
             >
               {selected && (
-                <motion.span layoutId="calendar-selected" className="absolute inset-0 rounded-2xl bg-primary shadow-soft" transition={{ type: "spring", duration: 0.4, bounce: 0.2 }} />
+                <motion.span layoutId="calendar-selected" className="absolute inset-0 rounded-2xl bg-brand shadow-soft" transition={{ type: "spring", duration: 0.4, bounce: 0.2 }} />
               )}
-              <span className={cn("relative", date === now && !selected && "font-bold text-blush-600 dark:text-champagne-300")}>
+              <span className={cn("relative", date === now && !selected && "font-bold text-orchid-600 dark:text-iris-300")}>
                 {toFa(jalali(date).date())}
               </span>
-              {status === "full" && <span className="relative text-[9px] leading-none text-blush-500/80">تکمیل</span>}
-              {date === now && !selected && <span className="absolute bottom-1.5 size-1 rounded-full bg-blush-500 dark:bg-champagne-300" />}
+              {status === "full" && <span className="relative text-[9px] leading-none text-orchid-500/80">تکمیل</span>}
+              {date === now && !selected && <span className="absolute bottom-1.5 size-1 rounded-full bg-orchid-500 dark:bg-iris-300" />}
             </button>
           );
         })}

@@ -42,8 +42,8 @@ export function StepAuth({ input, note, onNoteChange, onBooked, onSlotTaken }: P
 
   return (
     <div className="mx-auto max-w-md space-y-6">
-      <div className="flex items-center gap-3 rounded-3xl border border-line bg-elevated/60 p-4">
-        <span className="grid size-11 place-items-center rounded-full bg-surface text-blush-600 dark:text-champagne-300">
+      <div className="flex items-center gap-3 glass rounded-3xl p-4">
+        <span className="grid size-11 place-items-center rounded-full bg-white/70 dark:bg-white/10 text-orchid-600 dark:text-iris-300">
           <UserRound className="size-5" aria-hidden />
         </span>
         <div className="min-w-0 flex-1">

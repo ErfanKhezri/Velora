@@ -19,7 +19,7 @@ import { dayjs, formatDay, formatTime, WEEKDAYS } from "../../lib/date";
 import { cn } from "../../lib/cn";
 import { TimeOffModal } from "./TimeOffModal";
 
-const COLORS = ["#c97770", "#b8924f", "#9a7189", "#7f8f86", "#8a7bb0", "#c48a5a"];
+const COLORS = ["#f72f90", "#8b5cf6", "#ff7a59", "#14b8a6", "#3b82f6", "#e879f9"];
 
 const schema = z.object({
   name: z.string().trim().min(2, "نام را وارد کنید"),
@@ -214,8 +214,8 @@ export default function Staff() {
             <legend className="mb-2 text-sm font-medium">خدمات قابل ارائه</legend>
             <div className="grid gap-2 sm:grid-cols-2">
               {services?.map((s) => (
-                <label key={s.id} className="flex cursor-pointer items-center gap-2.5 rounded-xl border border-line px-3 py-2.5 text-sm has-checked:border-blush-400 has-checked:bg-blush-50 dark:has-checked:border-champagne-300/50 dark:has-checked:bg-white/5">
-                  <input type="checkbox" value={s.id} className="size-4 accent-blush-500" {...form.register("serviceIds")} />
+                <label key={s.id} className="flex cursor-pointer items-center gap-2.5 rounded-xl border border-line px-3 py-2.5 text-sm has-checked:border-orchid-400 has-checked:bg-orchid-50 dark:has-checked:border-iris-300/50 dark:has-checked:bg-white/5">
+                  <input type="checkbox" value={s.id} className="size-4 accent-orchid-500" {...form.register("serviceIds")} />
                   {s.name}
                 </label>
               ))}

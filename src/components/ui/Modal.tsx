@@ -36,7 +36,7 @@ export function Modal({ open, onClose, title, children, footer, side, className 
       {open && (
         <div className={cn("fixed inset-0 z-50 flex", side ? "justify-end" : "items-end justify-center sm:items-center sm:p-6")}>
           <motion.div
-            className="absolute inset-0 bg-plum-950/40 backdrop-blur-sm"
+            className="absolute inset-0 bg-night-950/30 backdrop-blur-[6px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -53,7 +53,7 @@ export function Modal({ open, onClose, title, children, footer, side, className 
             exit={side ? { x: "-100%" } : { y: 40, opacity: 0, scale: 0.98 }}
             transition={{ type: "spring", duration: 0.45, bounce: 0.12 }}
             className={cn(
-              "relative flex max-h-[92dvh] w-full flex-col bg-surface shadow-2xl outline-none",
+              "glass relative flex max-h-[92dvh] w-full flex-col outline-none [--glass-tint:rgb(255_255_255/0.78)] dark:[--glass-tint:rgb(23_17_44/0.8)]",
               side
                 ? "h-dvh max-h-dvh max-w-md border-e border-line sm:rounded-e-4xl"
                 : "rounded-t-4xl sm:max-w-lg sm:rounded-4xl",

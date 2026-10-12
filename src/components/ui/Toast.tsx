@@ -12,7 +12,7 @@ const icons = { success: CircleCheck, error: CircleAlert, info: Info };
 const colors = {
   success: "text-emerald-600 dark:text-emerald-300",
   error: "text-red-500 dark:text-red-300",
-  info: "text-champagne-500 dark:text-champagne-300",
+  info: "text-iris-500 dark:text-iris-300",
 };
 
 let nextId = 1;
@@ -44,7 +44,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -10, scale: 0.96 }}
                 role={t.type === "error" ? "alert" : "status"}
-                className="pointer-events-auto flex max-w-sm items-center gap-3 rounded-2xl border border-line bg-surface/95 px-4 py-3 text-sm shadow-soft backdrop-blur"
+                className="pointer-events-auto flex max-w-sm items-center gap-3 glass rounded-2xl px-4 py-3 text-sm"
               >
                 <Icon className={cn("size-5 shrink-0", colors[t.type])} />
                 <span className="leading-6">{t.message}</span>

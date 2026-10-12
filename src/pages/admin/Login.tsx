@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { Navigate, useNavigate } from "react-router";
 import { z } from "zod";
 import { DemoBanner } from "../../components/DemoBanner";
+import { LiveBackground } from "../../components/LiveBackground";
 import { Logo } from "../../components/Logo";
 import { ThemeToggle } from "../../components/ThemeToggle";
 import { Button } from "../../components/ui/Button";
@@ -39,10 +40,11 @@ export default function Login() {
 
   return (
     <div className="flex min-h-dvh flex-col">
+      <LiveBackground />
       <DemoBanner />
       <div className="relative flex flex-1 items-center justify-center overflow-hidden px-4 py-12">
-        <div className="pointer-events-none absolute -top-32 -right-32 size-96 rounded-full bg-blush-200/60 blur-3xl dark:bg-blush-800/30" />
-        <div className="pointer-events-none absolute -bottom-32 -left-32 size-96 rounded-full bg-champagne-200/60 blur-3xl dark:bg-champagne-700/20" />
+        <div className="pointer-events-none absolute -top-32 -right-32 size-96 rounded-full bg-orchid-200/60 blur-3xl dark:bg-orchid-800/30" />
+        <div className="pointer-events-none absolute -bottom-32 -left-32 size-96 rounded-full bg-iris-200/60 blur-3xl dark:bg-iris-700/20" />
         <div className="absolute top-4 end-4">
           <ThemeToggle />
         </div>
@@ -60,8 +62,8 @@ export default function Login() {
                 ورود
               </Button>
             </form>
-            <div className="mt-6 flex items-start gap-3 rounded-2xl border border-dashed border-champagne-300 bg-champagne-50 p-4 text-sm dark:border-champagne-300/30 dark:bg-champagne-300/5">
-              <KeyRound className="mt-0.5 size-4 shrink-0 text-champagne-600 dark:text-champagne-300" aria-hidden />
+            <div className="mt-6 flex items-start gap-3 rounded-2xl border border-dashed border-iris-300 bg-iris-50 p-4 text-sm dark:border-iris-300/30 dark:bg-iris-300/5">
+              <KeyRound className="mt-0.5 size-4 shrink-0 text-iris-600 dark:text-iris-300" aria-hidden />
               <div className="leading-7">
                 <p className="font-medium">اطلاعات ورود نمایشی</p>
                 <p className="text-muted">

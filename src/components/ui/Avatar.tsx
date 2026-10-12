@@ -11,7 +11,7 @@ export function Avatar({ staff, className }: { staff: Pick<Staff, "name" | "avat
     <div
       aria-hidden
       className={cn("grid size-12 shrink-0 place-items-center rounded-full font-semibold text-white shadow-soft ring-2 ring-surface", className)}
-      style={{ background: `linear-gradient(135deg, ${staff.avatar}, color-mix(in oklab, ${staff.avatar} 55%, #f5e6d3))` }}
+      style={{ background: `linear-gradient(135deg, ${staff.avatar}, color-mix(in oklab, ${staff.avatar} 55%, #ffffff))` }}
     >
       {initials}
     </div>

@@ -11,7 +11,7 @@ export function Switch({ checked, onChange, label }: { checked: boolean; onChang
       onClick={() => onChange(!checked)}
       className={cn(
         "flex h-7 w-12 shrink-0 cursor-pointer items-center rounded-full p-1 transition-colors",
-        checked ? "justify-end bg-blush-500 dark:bg-champagne-400" : "justify-start bg-line",
+        checked ? "justify-end bg-orchid-500 dark:bg-iris-400" : "justify-start bg-line",
       )}
     >
       <motion.span layout transition={{ type: "spring", duration: 0.3, bounce: 0.2 }} className="size-5 rounded-full bg-white shadow" />

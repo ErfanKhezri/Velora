@@ -20,13 +20,13 @@ export function StepDone({ appointment, onRestart }: { appointment: AppointmentD
     <div className="mx-auto max-w-md text-center">
       <div className="relative mx-auto mb-6 grid size-24 place-items-center">
         <motion.span
-          className="absolute inset-0 rounded-full bg-blush-200/70 dark:bg-champagne-300/20"
+          className="absolute inset-0 rounded-full bg-orchid-200/70 dark:bg-iris-300/20"
           initial={{ scale: 0.4, opacity: 0 }}
           animate={{ scale: [0.4, 1.25, 1], opacity: [0, 1, 0.6] }}
           transition={{ duration: 0.9 }}
         />
         <motion.span
-          className="relative grid size-16 place-items-center rounded-full bg-gradient-to-br from-blush-500 to-champagne-400 text-white shadow-glow"
+          className="relative grid size-16 place-items-center rounded-full bg-gradient-to-br from-orchid-500 to-iris-400 text-white shadow-glow"
           initial={{ scale: 0, rotate: -90 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ type: "spring", delay: 0.15, bounce: 0.5 }}

@@ -44,7 +44,7 @@ export default function Settings() {
       <Card className="p-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-start gap-3">
-            <Timer className="mt-0.5 size-5 text-blush-500 dark:text-champagne-300" aria-hidden />
+            <Timer className="mt-0.5 size-5 text-orchid-500 dark:text-iris-300" aria-hidden />
             <div>
               <h2 className="font-semibold">فاصله زمان‌های نوبت</h2>
               <p className="mt-1 text-sm text-muted">زمان‌های آزاد با این فاصله به مشتری پیشنهاد می‌شوند</p>
@@ -68,7 +68,7 @@ export default function Settings() {
       <Card className="p-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-start gap-3">
-            <CalendarOff className="mt-0.5 size-5 text-blush-500 dark:text-champagne-300" aria-hidden />
+            <CalendarOff className="mt-0.5 size-5 text-orchid-500 dark:text-iris-300" aria-hidden />
             <div>
               <h2 className="font-semibold">تعطیلی‌های سالن</h2>
               <p className="mt-1 text-sm text-muted">در این روزها هیچ نوبتی قابل رزرو نیست</p>

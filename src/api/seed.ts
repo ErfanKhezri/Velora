@@ -19,10 +19,10 @@ const services: Service[] = [
 ];
 
 const staff: Staff[] = [
-  { id: "sara", name: "سارا محمدی", title: "استایلیست ارشد مو", avatar: "#c97770", serviceIds: ["haircut", "blowdry", "updo", "keratin"], active: true },
-  { id: "negar", name: "نگار رحیمی", title: "متخصص رنگ و لایت", avatar: "#b8924f", serviceIds: ["root-color", "balayage", "highlight", "haircut"], active: true },
-  { id: "maryam", name: "مریم کاظمی", title: "متخصص ناخن", avatar: "#9a7189", serviceIds: ["manicure", "pedicure", "gel-nails"], active: true },
-  { id: "leila", name: "لیلا احمدی", title: "متخصص پوست و میکاپ", avatar: "#7f8f86", serviceIds: ["deep-clean", "hydrafacial", "party-makeup", "bridal", "updo"], active: true },
+  { id: "sara", name: "سارا محمدی", title: "استایلیست ارشد مو", avatar: "#f72f90", serviceIds: ["haircut", "blowdry", "updo", "keratin"], active: true },
+  { id: "negar", name: "نگار رحیمی", title: "متخصص رنگ و لایت", avatar: "#8b5cf6", serviceIds: ["root-color", "balayage", "highlight", "haircut"], active: true },
+  { id: "maryam", name: "مریم کاظمی", title: "متخصص ناخن", avatar: "#ff7a59", serviceIds: ["manicure", "pedicure", "gel-nails"], active: true },
+  { id: "leila", name: "لیلا احمدی", title: "متخصص پوست و میکاپ", avatar: "#14b8a6", serviceIds: ["deep-clean", "hydrafacial", "party-makeup", "bridal", "updo"], active: true },
 ];
 
 // [staffId, weekdays, startMin, endMin]
@@ -61,6 +61,9 @@ const bookings: [number, string, string, number, string][] = [
   [5, "negar", "highlight", 780, "c3"],
   [5, "leila", "bridal", 660, "c6"],
 ];
+
+/** Bump when the seed changes so stored demo data is replaced. */
+export const SEED_VERSION = 2;
 
 export function createSeed(): Db {
   const weekStart = startOfWeek(today());
@@ -108,6 +111,7 @@ export function createSeed(): Db {
   ];
 
   return {
+    version: SEED_VERSION,
     services,
     staff,
     workingHours,

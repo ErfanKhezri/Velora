@@ -41,12 +41,12 @@ export function StepStaff({ serviceId, value, onChange }: Props) {
             aria-pressed={selected}
             className={cn(
               "relative flex cursor-pointer items-center gap-4 rounded-3xl border p-4 text-start transition-colors",
-              selected ? "border-transparent bg-blush-50 dark:bg-white/5" : "border-line bg-surface hover:border-blush-200 dark:hover:border-white/15",
+              selected ? "border-transparent bg-orchid-50 dark:bg-white/5" : "glass-thin hover:border-orchid-200 dark:hover:border-white/15",
             )}
           >
-            {selected && <motion.span layoutId="staff-selected" className="absolute inset-0 rounded-3xl border-2 border-blush-400 dark:border-champagne-300" transition={{ type: "spring", duration: 0.4, bounce: 0.15 }} />}
+            {selected && <motion.span layoutId="staff-selected" className="absolute inset-0 rounded-3xl border-2 border-orchid-400 dark:border-iris-300" transition={{ type: "spring", duration: 0.4, bounce: 0.15 }} />}
             {option.id === "any" ? (
-              <span className="grid size-14 shrink-0 place-items-center rounded-full bg-gradient-to-br from-champagne-200 to-blush-200 text-plum-800 shadow-soft">
+              <span className="grid size-14 shrink-0 place-items-center rounded-full bg-gradient-to-br from-iris-200 to-orchid-200 text-night-800 shadow-soft">
                 <Sparkles className="size-6" aria-hidden />
               </span>
             ) : (

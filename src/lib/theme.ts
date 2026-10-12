@@ -6,7 +6,7 @@ export function isDark() {
 
 export function setTheme(dark: boolean) {
   document.documentElement.classList.toggle("dark", dark);
-  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#171016" : "#fbf7f3");
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#0d0a1c" : "#faf7ff");
   localStorage.setItem(KEY, dark ? "dark" : "light");
 }
 

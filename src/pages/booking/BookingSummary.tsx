@@ -23,15 +23,15 @@ export function BookingSummary({ service, person, anyStaff, date, slot, classNam
 
   return (
     <Card className={cn("sticky top-24 overflow-hidden", className)}>
-      <div className="relative bg-gradient-to-br from-blush-100 via-cream to-champagne-100 px-6 py-5 dark:from-plum-700 dark:via-plum-800 dark:to-plum-900">
-        <div className="absolute -top-10 -left-10 size-32 rounded-full bg-champagne-200/60 blur-2xl dark:bg-champagne-300/10" />
+      <div className="relative bg-gradient-to-br from-orchid-100 via-mist to-iris-100 px-6 py-5 dark:from-night-700 dark:via-night-800 dark:to-night-900">
+        <div className="absolute -top-10 -left-10 size-32 rounded-full bg-iris-200/60 blur-2xl dark:bg-iris-300/10" />
         <h2 className="relative font-semibold">خلاصه رزرو</h2>
         <p className="relative mt-1 text-xs text-muted">با هر انتخاب به‌روز می‌شود</p>
       </div>
       <dl className="space-y-4 px-6 py-5">
         {rows.map((row) => (
           <div key={row.label} className="flex items-center gap-3">
-            <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-elevated text-blush-600 dark:text-champagne-300">
+            <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-elevated text-orchid-600 dark:text-iris-300">
               <row.icon className="size-4" aria-hidden />
             </span>
             <div className="min-w-0">

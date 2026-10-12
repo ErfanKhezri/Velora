@@ -1,11 +1,12 @@
-import { createSeed } from "./seed";
+import { createSeed, SEED_VERSION } from "./seed";
 import type { Db } from "./types";
 
 const KEY = "velora-db";
 
 export function readDb(): Db {
   const raw = localStorage.getItem(KEY);
-  if (raw) return JSON.parse(raw);
+  const stored: Db | null = raw ? JSON.parse(raw) : null;
+  if (stored?.version === SEED_VERSION) return stored;
   const seed = createSeed();
   writeDb(seed);
   return seed;

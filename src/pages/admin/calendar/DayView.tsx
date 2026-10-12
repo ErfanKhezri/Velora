@@ -24,7 +24,7 @@ export function DayView({ date, staff, workingHours, appointments, mobileStaffId
   const nowMin = date === today() ? minutesOfDay(dayjs()) : null;
 
   return (
-    <div className="overflow-hidden rounded-3xl border border-line bg-surface shadow-soft">
+    <div className="glass overflow-hidden rounded-3xl">
       <div className="flex border-b border-line">
         <div className="w-14 shrink-0" />
         {staff.map((person) => (
@@ -60,7 +60,7 @@ export function DayView({ date, staff, workingHours, appointments, mobileStaffId
               style={{ height: (END - START) * PX }}
             >
               {shifts.map((s) => (
-                <div key={s.startMin} className="absolute inset-x-0 bg-surface" style={{ top: (s.startMin - START) * PX, height: (s.endMin - s.startMin) * PX }} />
+                <div key={s.startMin} className="absolute inset-x-0 bg-white/60 dark:bg-white/[0.04]" style={{ top: (s.startMin - START) * PX, height: (s.endMin - s.startMin) * PX }} />
               ))}
               {hours.map((h) => (
                 <div key={h} className="absolute inset-x-0 border-t border-line/70" style={{ top: (h - START) * PX }} />
@@ -93,8 +93,8 @@ export function DayView({ date, staff, workingHours, appointments, mobileStaffId
               })}
 
               {nowMin !== null && nowMin > START && nowMin < END && (
-                <div className="pointer-events-none absolute inset-x-0 z-20 border-t-2 border-blush-500 dark:border-champagne-300" style={{ top: (nowMin - START) * PX }}>
-                  <span className="absolute -top-[5px] -start-1 size-2 rounded-full bg-blush-500 dark:bg-champagne-300" />
+                <div className="pointer-events-none absolute inset-x-0 z-20 border-t-2 border-orchid-500 dark:border-iris-300" style={{ top: (nowMin - START) * PX }}>
+                  <span className="absolute -top-[5px] -start-1 size-2 rounded-full bg-orchid-500 dark:bg-iris-300" />
                 </div>
               )}
             </div>

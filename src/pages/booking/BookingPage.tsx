@@ -153,7 +153,7 @@ export default function BookingPage() {
       </div>
 
       {showActions && (
-        <div className="pb-safe fixed inset-x-0 bottom-0 z-30 border-t border-line bg-bg/90 backdrop-blur-xl md:hidden">
+        <div className="glass fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-30 rounded-3xl md:hidden">
           <div className="flex items-center gap-3 px-4 py-3">
             <Button variant="secondary" onClick={() => goTo(step - 1)} disabled={step === 1} aria-label="مرحله قبل" className="w-12 px-0">
               <ArrowRight className="size-5" />

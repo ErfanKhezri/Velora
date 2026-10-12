@@ -167,7 +167,7 @@ export default function Services() {
           </div>
           <Textarea label="توضیح کوتاه" error={errors.description?.message} {...form.register("description")} />
           <label className="flex cursor-pointer items-center gap-3 text-sm">
-            <input type="checkbox" className="size-4 accent-blush-500" {...form.register("active")} />
+            <input type="checkbox" className="size-4 accent-orchid-500" {...form.register("active")} />
             نمایش در سایت (فعال)
           </label>
           <button type="submit" hidden />

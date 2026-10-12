@@ -36,7 +36,7 @@ export default function Home() {
 function SectionTitle({ kicker, title, text }: { kicker: string; title: string; text?: string }) {
   return (
     <motion.div variants={rise} {...inView} className="mx-auto mb-10 max-w-xl text-center sm:mb-14">
-      <p className="mb-3 inline-flex items-center gap-2 text-sm font-medium text-champagne-600 dark:text-champagne-300">
+      <p className="mb-3 inline-flex items-center gap-2 text-sm font-medium text-iris-600 dark:text-iris-300">
         <span className="h-px w-6 bg-current" />
         {kicker}
         <span className="h-px w-6 bg-current" />
@@ -50,12 +50,12 @@ function SectionTitle({ kicker, title, text }: { kicker: string; title: string; 
 function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="pointer-events-none absolute -top-40 -right-40 size-[32rem] rounded-full bg-blush-200/70 blur-3xl dark:bg-blush-800/25" />
-      <div className="pointer-events-none absolute top-40 -left-40 size-[28rem] rounded-full bg-champagne-200/70 blur-3xl dark:bg-champagne-700/15" />
+      <div className="pointer-events-none absolute -top-40 -right-40 size-[32rem] rounded-full bg-orchid-200/70 blur-3xl dark:bg-orchid-800/25" />
+      <div className="pointer-events-none absolute top-40 -left-40 size-[28rem] rounded-full bg-iris-200/70 blur-3xl dark:bg-iris-700/15" />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pt-12 pb-20 sm:px-6 md:pt-20 lg:grid-cols-[1.1fr_1fr] lg:pb-28">
         <motion.div initial="hidden" animate="show">
-          <motion.p variants={rise} custom={0} className="inline-flex items-center gap-2 rounded-full border border-champagne-300/60 bg-surface/70 px-4 py-1.5 text-sm text-champagne-700 backdrop-blur dark:text-champagne-200">
+          <motion.p variants={rise} custom={0} className="inline-flex items-center gap-2 rounded-full glass-thin border px-4 py-1.5 text-sm text-iris-700 dark:text-iris-200">
             <Sparkles className="size-4" aria-hidden />
             سالن زیبایی تخصصی بانوان
           </motion.p>
@@ -110,10 +110,10 @@ function HeroArt() {
       aria-hidden
     >
       {/* An arched mirror, the salon's signature shape */}
-      <div className="relative aspect-[4/5] overflow-hidden rounded-t-full border border-champagne-300/50 bg-gradient-to-b from-blush-100 via-cream to-champagne-100 shadow-glow dark:from-plum-700 dark:via-plum-800 dark:to-plum-900">
-        <div className="absolute inset-4 rounded-t-full border border-champagne-300/40" />
-        <div className="absolute top-1/4 left-1/2 size-56 -translate-x-1/2 rounded-full bg-gradient-to-br from-blush-300/80 to-champagne-300/70 blur-2xl dark:from-blush-500/40 dark:to-champagne-400/30" />
-        <svg viewBox="0 0 200 250" className="absolute inset-0 size-full text-blush-700/70 dark:text-champagne-200/70" fill="none" stroke="currentColor" strokeWidth="0.8">
+      <div className="relative aspect-[4/5] overflow-hidden rounded-t-full border border-iris-300/50 bg-gradient-to-b from-orchid-100 via-mist to-iris-100 shadow-glow dark:from-night-700 dark:via-night-800 dark:to-night-900">
+        <div className="absolute inset-4 rounded-t-full border border-iris-300/40" />
+        <div className="absolute top-1/4 left-1/2 size-56 -translate-x-1/2 rounded-full bg-gradient-to-br from-orchid-300/80 to-iris-300/70 blur-2xl dark:from-orchid-500/40 dark:to-iris-400/30" />
+        <svg viewBox="0 0 200 250" className="absolute inset-0 size-full text-orchid-700/70 dark:text-iris-200/70" fill="none" stroke="currentColor" strokeWidth="0.8">
           <path d="M100 40c-30 30-40 70-20 110s50 60 20 100" />
           <path d="M100 40c30 30 40 70 20 110s-50 60-20 100" />
           <path d="M60 210c20-10 60-10 80 0" />
@@ -123,9 +123,9 @@ function HeroArt() {
         <motion.div
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-10 left-1/2 grid size-16 -translate-x-1/2 place-items-center rounded-full bg-surface/80 shadow-soft backdrop-blur"
+          className="absolute bottom-10 left-1/2 grid size-16 -translate-x-1/2 place-items-center glass rounded-full"
         >
-          <Gem className="size-7 text-champagne-500 dark:text-champagne-300" />
+          <Gem className="size-7 text-iris-500 dark:text-iris-300" />
         </motion.div>
       </div>
 
@@ -133,7 +133,7 @@ function HeroArt() {
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.7, duration: 0.6 }}
-        className="absolute top-16 -right-4 rounded-2xl border border-line bg-surface/90 p-3 shadow-soft backdrop-blur sm:-right-10"
+        className="absolute top-16 -right-4 glass rounded-2xl p-3 sm:-right-10"
       >
         <div className="flex items-center gap-2.5">
           <span className="grid size-9 place-items-center rounded-xl bg-emerald-100 text-emerald-700 dark:bg-emerald-400/15 dark:text-emerald-200">
@@ -150,9 +150,9 @@ function HeroArt() {
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.9, duration: 0.6 }}
-        className="absolute bottom-24 -left-4 rounded-2xl border border-line bg-surface/90 p-3 shadow-soft backdrop-blur sm:-left-10"
+        className="absolute bottom-24 -left-4 glass rounded-2xl p-3 sm:-left-10"
       >
-        <div className="flex items-center gap-1 text-champagne-500 dark:text-champagne-300">
+        <div className="flex items-center gap-1 text-iris-500 dark:text-iris-300">
           {Array.from({ length: 5 }, (_, i) => (
             <Star key={i} className="size-3.5 fill-current" />
           ))}
@@ -167,7 +167,7 @@ function Services() {
   const { data: services } = useServices();
 
   return (
-    <section id="services" className="scroll-mt-24 bg-surface/60 py-20 sm:py-28">
+    <section id="services" className="scroll-mt-24 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionTitle kicker="خدمات" title="هر آنچه برای درخشیدن لازم دارید" text="خدمات تخصصی با بهترین متریال؛ زمان و هزینه هر خدمت از قبل مشخص است." />
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -181,7 +181,7 @@ function Services() {
                   <motion.div key={category.id} variants={rise} custom={i} {...inView} className={cn(i === 0 && "lg:row-span-2")}>
                     <Card className="h-full p-6 transition-shadow hover:shadow-glow">
                       <div className="mb-5 flex items-center gap-3">
-                        <span className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-blush-100 to-champagne-100 text-blush-600 dark:from-white/10 dark:to-white/5 dark:text-champagne-300">
+                        <span className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-orchid-100 to-iris-100 text-orchid-600 dark:from-white/10 dark:to-white/5 dark:text-iris-300">
                           <Icon className="size-5" aria-hidden />
                         </span>
                         <h3 className="text-xl font-bold">{category.label}</h3>
@@ -191,7 +191,7 @@ function Services() {
                           <li key={s.id}>
                             <Link to={`/book?service=${s.id}&step=2`} className="group flex items-center justify-between gap-3 py-3">
                               <span className="min-w-0">
-                                <span className="block font-medium transition-colors group-hover:text-blush-600 dark:group-hover:text-champagne-300">{s.name}</span>
+                                <span className="block font-medium transition-colors group-hover:text-orchid-600 dark:group-hover:text-iris-300">{s.name}</span>
                                 <span className="text-xs text-muted">{formatDuration(s.durationMin)}</span>
                               </span>
                               <span className="shrink-0 text-sm font-semibold">{formatPrice(s.price)}</span>
@@ -225,13 +225,13 @@ function Team() {
                 .map((person, i) => (
                   <motion.div key={person.id} variants={rise} custom={i} {...inView} whileHover={{ y: -6 }}>
                     <Card className="h-full overflow-hidden text-center">
-                      <div className="relative h-24 bg-gradient-to-br from-blush-100 via-cream to-champagne-100 dark:from-plum-700 dark:via-plum-800 dark:to-plum-900">
+                      <div className="relative h-24 bg-gradient-to-br from-orchid-100 via-mist to-iris-100 dark:from-night-700 dark:via-night-800 dark:to-night-900">
                         <div className="absolute inset-0 opacity-40" style={{ background: `radial-gradient(circle at 70% 20%, ${person.avatar}55, transparent 60%)` }} />
                       </div>
                       <Avatar staff={person} className="relative mx-auto -mt-10 size-20 text-xl ring-4" />
                       <div className="p-5 pt-3">
                         <h3 className="text-lg font-bold">{person.name}</h3>
-                        <p className="text-sm text-champagne-600 dark:text-champagne-300">{person.title}</p>
+                        <p className="text-sm text-iris-600 dark:text-iris-300">{person.title}</p>
                         <div className="mt-4 flex flex-wrap justify-center gap-1.5">
                           {person.serviceIds.slice(0, 3).map((id) => (
                             <span key={id} className="rounded-full bg-elevated px-2.5 py-1 text-xs text-muted">
@@ -251,17 +251,17 @@ function Team() {
 
 // Placeholder "photos": soft abstract compositions standing in for real salon shots.
 const gallery = [
-  { title: "بالیاژ عسلی", tag: "رنگ مو", bg: "radial-gradient(circle at 30% 30%, #f3d4d0, transparent 55%), radial-gradient(circle at 70% 75%, #cfac6a, transparent 55%), linear-gradient(160deg, #8f4c4a, #dec58e)", span: "md:row-span-2" },
-  { title: "کاشت ناخن نود", tag: "ناخن", bg: "radial-gradient(circle at 60% 40%, #fdf6f5, transparent 50%), linear-gradient(135deg, #e9b7b1, #f5eedc)" },
-  { title: "فضای انتظار", tag: "سالن", bg: "radial-gradient(circle at 20% 80%, #dec58e88, transparent 50%), linear-gradient(200deg, #3a2431, #6f3c3c)" },
-  { title: "شینیون مجلسی", tag: "مو", bg: "radial-gradient(circle at 50% 30%, #ebdcb8, transparent 55%), linear-gradient(120deg, #c97770, #f3d4d0)", span: "md:col-span-2" },
-  { title: "اتاق مراقبت پوست", tag: "پوست", bg: "radial-gradient(circle at 70% 30%, #ffffffaa, transparent 45%), linear-gradient(160deg, #9fb0a6, #ebdcb8)" },
-  { title: "ابزار حرفه‌ای", tag: "سالن", bg: "radial-gradient(circle at 40% 60%, #cfac6a, transparent 50%), linear-gradient(135deg, #2a1a24, #795c35)" },
+  { title: "بالیاژ عسلی", tag: "رنگ مو", bg: "radial-gradient(circle at 30% 25%, #ffd6ec, transparent 50%), radial-gradient(circle at 75% 80%, #a685ff, transparent 55%), linear-gradient(160deg, #f72f90, #8b5cf6)", span: "md:row-span-2" },
+  { title: "کاشت ناخن نود", tag: "ناخن", bg: "radial-gradient(circle at 60% 40%, #ffffff, transparent 50%), linear-gradient(135deg, #ff98cd, #c4b1ff)" },
+  { title: "فضای انتظار", tag: "سالن", bg: "radial-gradient(circle at 25% 75%, #38d6f299, transparent 50%), linear-gradient(200deg, #4a2394, #b80c63)" },
+  { title: "شینیون مجلسی", tag: "مو", bg: "radial-gradient(circle at 50% 30%, #ffe2f1, transparent 55%), linear-gradient(120deg, #ff5fae, #7a3ff0)", span: "md:col-span-2" },
+  { title: "اتاق مراقبت پوست", tag: "پوست", bg: "radial-gradient(circle at 70% 30%, #ffffffcc, transparent 45%), linear-gradient(160deg, #7ee8fa, #c4b1ff)" },
+  { title: "ابزار حرفه‌ای", tag: "سالن", bg: "radial-gradient(circle at 40% 60%, #ff5fae, transparent 50%), linear-gradient(135deg, #1c1538, #6a2edb)" },
 ];
 
 function Gallery() {
   return (
-    <section className="bg-surface/60 py-20 sm:py-28">
+    <section className="py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionTitle kicker="گالری" title="نمونه‌ای از کارهای ما" />
         <div className="grid auto-rows-[180px] grid-cols-2 gap-3 sm:gap-4 md:auto-rows-[220px] md:grid-flow-dense md:grid-cols-4">
@@ -304,28 +304,28 @@ function Visit() {
             <Card className="h-full space-y-6 p-6 sm:p-8">
               <div>
                 <h3 className="mb-3 flex items-center gap-2 font-semibold">
-                  <Clock3 className="size-5 text-blush-500 dark:text-champagne-300" aria-hidden />
+                  <Clock3 className="size-5 text-orchid-500 dark:text-iris-300" aria-hidden />
                   ساعات کاری
                 </h3>
                 <dl className="space-y-2 text-sm">
                   {hours.map(([day, time]) => (
                     <div key={day} className="flex justify-between border-b border-dashed border-line pb-2">
                       <dt className="text-muted">{day}</dt>
-                      <dd className={cn("font-medium", time === "تعطیل" && "text-blush-500")}>{time}</dd>
+                      <dd className={cn("font-medium", time === "تعطیل" && "text-orchid-500")}>{time}</dd>
                     </div>
                   ))}
                 </dl>
               </div>
-              <a href={SALON.phoneHref} className="flex items-center gap-3 hover:text-blush-600 dark:hover:text-champagne-300">
-                <Phone className="size-5 text-blush-500 dark:text-champagne-300" aria-hidden />
+              <a href={SALON.phoneHref} className="flex items-center gap-3 hover:text-orchid-600 dark:hover:text-iris-300">
+                <Phone className="size-5 text-orchid-500 dark:text-iris-300" aria-hidden />
                 <span dir="ltr" className="font-medium">{SALON.phone}</span>
               </a>
               <p className="flex items-start gap-3 leading-7">
-                <MapPin className="mt-1 size-5 shrink-0 text-blush-500 dark:text-champagne-300" aria-hidden />
+                <MapPin className="mt-1 size-5 shrink-0 text-orchid-500 dark:text-iris-300" aria-hidden />
                 {SALON.address}
               </p>
-              <a href={SALON.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-blush-600 dark:hover:text-champagne-300">
-                <InstagramIcon className="size-5 text-blush-500 dark:text-champagne-300" />
+              <a href={SALON.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-orchid-600 dark:hover:text-iris-300">
+                <InstagramIcon className="size-5 text-orchid-500 dark:text-iris-300" />
                 <span dir="ltr" className="font-medium">@velora.salon</span>
               </a>
             </Card>
@@ -342,9 +342,9 @@ function Visit() {
 
 function MapPlaceholder() {
   return (
-    <div className="relative h-full min-h-72 overflow-hidden rounded-3xl border border-line bg-[#f4ece6] shadow-soft dark:bg-plum-800" role="img" aria-label="نقشه موقعیت سالن (نمایشی)">
-      <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 size-full text-white dark:text-plum-700" aria-hidden>
-        <rect x="250" y="20" width="120" height="90" rx="14" className="fill-[#dfe8d8] dark:fill-[#2e3a2f]" />
+    <div className="relative h-full min-h-72 overflow-hidden rounded-3xl border border-line bg-[#f1ecfb] shadow-soft dark:bg-night-800" role="img" aria-label="نقشه موقعیت سالن (نمایشی)">
+      <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 size-full text-white dark:text-night-700" aria-hidden>
+        <rect x="250" y="20" width="120" height="90" rx="14" className="fill-[#d9f5e8] dark:fill-[#1d3b37]" />
         <g stroke="currentColor" strokeLinecap="round" fill="none">
           <path d="M-10 190 L410 150" strokeWidth="18" />
           <path d="M140 -10 L190 310" strokeWidth="14" />
@@ -355,11 +355,11 @@ function MapPlaceholder() {
       </svg>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full">
         <motion.div animate={{ y: [0, -6, 0] }} transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }} className="flex flex-col items-center">
-          <span className="rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-fg shadow-soft">ولورا</span>
-          <MapPin className="mt-1 size-9 fill-blush-500 text-white dark:fill-champagne-300 dark:text-plum-900" />
+          <span className="rounded-full bg-brand px-3 py-1 text-xs font-medium text-primary-fg shadow-soft">ولورا</span>
+          <MapPin className="mt-1 size-9 fill-orchid-500 text-white dark:fill-iris-300 dark:text-night-900" />
         </motion.div>
       </div>
-      <span className="absolute bottom-3 start-3 rounded-full bg-surface/85 px-3 py-1 text-xs text-muted backdrop-blur">نقشه نمایشی</span>
+      <span className="absolute bottom-3 start-3 glass-thin rounded-full border px-3 py-1 text-xs text-muted">نقشه نمایشی</span>
     </div>
   );
 }
@@ -370,17 +370,17 @@ function FinalCta() {
       <motion.div
         variants={rise}
         {...inView}
-        className="relative mx-auto max-w-6xl overflow-hidden rounded-4xl bg-gradient-to-br from-plum-800 via-plum-700 to-blush-800 px-6 py-14 text-center text-cream shadow-soft sm:py-20"
+        className="relative mx-auto max-w-6xl overflow-hidden rounded-4xl bg-gradient-to-br from-iris-600 via-orchid-500 to-orchid-400 px-6 py-14 text-center text-white shadow-glow sm:py-20"
       >
-        <div className="pointer-events-none absolute -top-20 -left-20 size-72 rounded-full bg-champagne-400/30 blur-3xl" />
-        <div className="pointer-events-none absolute -right-20 -bottom-20 size-72 rounded-full bg-blush-400/30 blur-3xl" />
+        <div className="pointer-events-none absolute -top-20 -left-20 size-72 rounded-full bg-aqua-300/40 blur-3xl" />
+        <div className="pointer-events-none absolute -right-20 -bottom-20 size-72 rounded-full bg-orchid-400/30 blur-3xl" />
         <h2 className="relative text-3xl font-bold sm:text-4xl">آماده‌اید کمی به خودتان برسید؟</h2>
-        <p className="relative mx-auto mt-4 max-w-md leading-8 text-cream/80">
+        <p className="relative mx-auto mt-4 max-w-md leading-8 text-white/85">
           زمان دلخواهتان را انتخاب کنید؛ بقیه‌اش با ما. رزرو آنلاین در {toFa(4)} قدم ساده.
         </p>
         <Link
           to="/book"
-          className="relative mt-8 inline-flex h-14 items-center gap-2 rounded-2xl bg-champagne-300 px-8 font-semibold text-plum-900 shadow-glow transition hover:bg-champagne-200"
+          className="relative mt-8 inline-flex h-14 items-center gap-2 glass rounded-2xl px-8 font-semibold text-white transition hover:brightness-110 [--glass-tint:rgb(255_255_255/0.22)] [--glass-edge:rgb(255_255_255/0.5)]"
         >
           <CalendarHeart className="size-5" aria-hidden />
           رزرو نوبت

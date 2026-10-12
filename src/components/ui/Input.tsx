@@ -2,7 +2,7 @@ import { useId, type InputHTMLAttributes, type ReactNode, type SelectHTMLAttribu
 import { cn } from "../../lib/cn";
 
 const field =
-  "w-full rounded-2xl border border-line bg-surface px-4 text-fg placeholder:text-muted/70 transition-colors focus:border-blush-400 focus:outline-none focus:ring-4 focus:ring-blush-200/50 dark:focus:border-champagne-300 dark:focus:ring-champagne-300/15 aria-invalid:border-red-400";
+  "w-full rounded-2xl border border-line bg-white/60 px-4 backdrop-blur-md dark:bg-white/5 text-fg placeholder:text-muted/70 transition-colors focus:border-orchid-400 focus:outline-none focus:ring-4 focus:ring-orchid-200/50 dark:focus:border-iris-300 dark:focus:ring-iris-300/15 aria-invalid:border-red-400";
 
 type FieldProps = { label?: string; error?: string; hint?: ReactNode; children: (id: string) => ReactNode; className?: string };
 
