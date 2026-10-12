@@ -60,7 +60,7 @@ export function Modal({ open, onClose, title, children, footer, side, className 
               className,
             )}
           >
-            <header className="flex items-center justify-between gap-4 border-b border-line px-6 py-4 pt-safe">
+            <header className="flex items-center justify-between gap-4 border-b border-line px-6 pb-4 pt-[max(1rem,env(safe-area-inset-top))]">
               <h2 className="py-1 text-lg font-semibold">{title}</h2>
               <button
                 type="button"

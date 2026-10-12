@@ -79,7 +79,7 @@ export function DayView({ date, staff, workingHours, appointments, mobileStaffId
                     whileHover={{ scale: 1.02 }}
                     onClick={() => onSelect(a.id)}
                     className={cn(
-                      "absolute inset-x-1.5 cursor-pointer overflow-hidden rounded-xl border px-2.5 py-1.5 text-start text-xs shadow-sm transition-shadow hover:z-10 hover:shadow-soft",
+                      "absolute inset-x-1.5 flex cursor-pointer flex-col justify-start overflow-hidden rounded-xl border px-2.5 py-1.5 text-start text-xs shadow-sm transition-shadow hover:z-10 hover:shadow-soft",
                       blockStyles[a.status],
                     )}
                     style={{ top: top + 1, height: height - 2 }}
