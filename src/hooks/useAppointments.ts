@@ -1,4 +1,4 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useMutation, useQuery } from "@tanstack/react-query";
 import * as api from "../api";
 import type { AppointmentStatus } from "../api";
 
@@ -11,7 +11,11 @@ export function useMyAppointments(customerId: string | undefined) {
 }
 
 export function useAppointments(from: string, to: string) {
-  return useQuery({ queryKey: ["appointments", from, to], queryFn: () => api.getAppointments(from, to) });
+  return useQuery({
+    queryKey: ["appointments", from, to],
+    queryFn: () => api.getAppointments(from, to),
+    placeholderData: keepPreviousData,
+  });
 }
 
 export function useCreateAppointment() {

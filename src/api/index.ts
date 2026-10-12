@@ -23,10 +23,20 @@ export { onExternalChange };
 const DEMO_OTP = "1234";
 
 function withDetails(db: Db, a: Appointment): AppointmentDetails {
+  // A deleted service still shows up in past appointments.
+  const removedService: Service = {
+    id: a.serviceId,
+    name: "خدمت حذف‌شده",
+    category: "hair",
+    durationMin: dayjs(a.endsAt).diff(a.startsAt, "minute"),
+    price: 0,
+    description: "",
+    active: false,
+  };
   return {
     ...a,
     customer: db.customers.find((c) => c.id === a.customerId)!,
-    service: db.services.find((s) => s.id === a.serviceId)!,
+    service: db.services.find((s) => s.id === a.serviceId) ?? removedService,
     staff: db.staff.find((s) => s.id === a.staffId)!,
   };
 }
