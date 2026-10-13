@@ -64,7 +64,7 @@ export function AppointmentSheet({ appointment, onClose, onRescheduled }: Props)
     <Sheet open={!!a} onClose={onClose} title="جزئیات نوبت">
       {a && (
         <div className="space-y-6">
-          <div className="rounded-3xl bg-gradient-to-br from-blush-100 via-cream to-champagne-100 p-5 dark:from-plum-700 dark:via-plum-800 dark:to-plum-900">
+          <div className="rounded-3xl bg-gradient-to-br from-orchid-100 via-mist to-iris-100 p-5 dark:from-night-700 dark:via-night-800 dark:to-night-900">
             <StatusBadge status={a.status} />
             <h3 className="mt-3 text-xl font-bold">{a.service.name}</h3>
             <p className="mt-1 text-sm text-muted">

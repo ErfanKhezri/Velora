@@ -19,14 +19,14 @@ export function WeekView({ weekStart, appointments, onSelect, onOpenDay }: Props
       {days.map((date, i) => {
         const items = appointments.filter((a) => toDateKey(a.startsAt) === date);
         return (
-          <section key={date} className={cn("rounded-3xl border border-line bg-surface p-2 shadow-soft md:min-h-80", i === 6 && "bg-elevated/50")}>
+          <section key={date} className={cn("glass rounded-3xl p-2 md:min-h-80", i === 6 && "opacity-80")}>
             <button
               type="button"
               onClick={() => onOpenDay(date)}
               className="flex w-full cursor-pointer items-center justify-between rounded-2xl px-2 py-2 text-start hover:bg-elevated md:flex-col md:items-start"
             >
               <span className="text-xs text-muted">{WEEKDAYS[i]}</span>
-              <span className={cn("text-lg font-bold", date === today() && "text-blush-600 dark:text-champagne-300")}>
+              <span className={cn("text-lg font-bold", date === today() && "text-orchid-600 dark:text-iris-300")}>
                 {toFa(jalali(date).format("D MMMM"))}
               </span>
             </button>

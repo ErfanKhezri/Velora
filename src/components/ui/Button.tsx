@@ -9,11 +9,12 @@ type Props = HTMLMotionProps<"button"> & {
 };
 
 const variants = {
-  primary: "bg-primary text-primary-fg shadow-soft hover:opacity-90",
+  primary:
+    "bg-brand text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.4),var(--shadow-glow)] hover:brightness-110",
   accent:
-    "bg-gradient-to-l from-blush-500 via-blush-400 to-champagne-400 text-white shadow-glow hover:brightness-105",
-  secondary: "border border-line bg-surface text-fg hover:bg-elevated",
-  ghost: "text-fg hover:bg-elevated",
+    "bg-gradient-to-l from-iris-500 via-orchid-500 to-orchid-400 text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.45),var(--shadow-glow)] hover:brightness-110",
+  secondary: "glass-thin border text-fg hover:bg-white/70 dark:hover:bg-white/10",
+  ghost: "text-fg hover:bg-white/50 dark:hover:bg-white/10",
   danger: "bg-red-600/90 text-white hover:bg-red-600",
 };
 

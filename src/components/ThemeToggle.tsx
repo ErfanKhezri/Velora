@@ -18,7 +18,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       onClick={toggle}
       aria-label={dark ? "حالت روشن" : "حالت تیره"}
       className={cn(
-        "relative grid size-10 cursor-pointer place-items-center overflow-hidden rounded-full border border-line bg-surface text-fg transition-colors hover:bg-elevated",
+        "relative grid size-10 cursor-pointer place-items-center overflow-hidden glass-thin rounded-full border text-fg transition-colors hover:bg-white/70 dark:hover:bg-white/10",
         className,
       )}
     >

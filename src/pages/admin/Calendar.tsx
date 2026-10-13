@@ -68,7 +68,7 @@ export default function Calendar() {
         {stats.map((s, i) => (
           <motion.div key={s.label} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.06 }}>
             <Card className="flex items-center gap-4 p-5">
-              <span className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-blush-100 to-champagne-100 text-blush-600 dark:from-white/10 dark:to-white/5 dark:text-champagne-300">
+              <span className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-orchid-100 to-iris-100 text-orchid-600 dark:from-white/10 dark:to-white/5 dark:text-iris-300">
                 <s.icon className="size-5" aria-hidden />
               </span>
               <div>
@@ -118,7 +118,7 @@ export default function Calendar() {
                 onClick={() => setMobileStaffId(s.id)}
                 className={cn(
                   "shrink-0 cursor-pointer rounded-full border px-4 py-2 text-sm font-medium transition-colors",
-                  isActive ? "border-transparent bg-primary text-primary-fg" : "border-line text-muted",
+                  isActive ? "border-transparent bg-brand text-primary-fg" : "border-line text-muted",
                 )}
               >
                 {s.name}

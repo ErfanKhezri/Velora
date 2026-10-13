@@ -53,6 +53,7 @@ export type Appointment = {
 export type Settings = { slotInterval: 15 | 30 };
 
 export type Db = {
+  version: number;
   services: Service[];
   staff: Staff[];
   workingHours: WorkingHour[];

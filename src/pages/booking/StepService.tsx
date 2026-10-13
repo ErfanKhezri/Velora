@@ -38,7 +38,7 @@ export function StepService({ services, value, onChange }: Props) {
               category === c.id ? "border-transparent text-primary-fg" : "border-line text-muted hover:text-fg",
             )}
           >
-            {category === c.id && <motion.span layoutId="category-pill" className="absolute inset-0 rounded-full bg-primary" transition={{ type: "spring", duration: 0.4, bounce: 0.15 }} />}
+            {category === c.id && <motion.span layoutId="category-pill" className="absolute inset-0 rounded-full bg-brand" transition={{ type: "spring", duration: 0.4, bounce: 0.15 }} />}
             <span className="relative">{c.label}</span>
           </button>
         ))}
@@ -61,20 +61,20 @@ export function StepService({ services, value, onChange }: Props) {
               aria-pressed={selected}
               className={cn(
                 "relative flex cursor-pointer gap-4 rounded-3xl border p-4 text-start transition-colors",
-                selected ? "border-transparent bg-blush-50 dark:bg-white/5" : "border-line bg-surface hover:border-blush-200 dark:hover:border-white/15",
+                selected ? "border-transparent bg-orchid-50 dark:bg-white/5" : "glass-thin hover:border-orchid-200 dark:hover:border-white/15",
               )}
             >
               {selected && (
-                <motion.span layoutId="service-selected" className="absolute inset-0 rounded-3xl border-2 border-blush-400 dark:border-champagne-300" transition={{ type: "spring", duration: 0.4, bounce: 0.15 }} />
+                <motion.span layoutId="service-selected" className="absolute inset-0 rounded-3xl border-2 border-orchid-400 dark:border-iris-300" transition={{ type: "spring", duration: 0.4, bounce: 0.15 }} />
               )}
-              <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-blush-100 to-champagne-100 text-blush-600 dark:from-white/10 dark:to-white/5 dark:text-champagne-300">
+              <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-orchid-100 to-iris-100 text-orchid-600 dark:from-white/10 dark:to-white/5 dark:text-iris-300">
                 <Icon className="size-5" aria-hidden />
               </span>
               <span className="min-w-0 flex-1">
                 <span className="flex items-start justify-between gap-2">
                   <span className="font-semibold">{service.name}</span>
                   {selected && (
-                    <span className="grid size-5 shrink-0 place-items-center rounded-full bg-blush-500 text-white dark:bg-champagne-300 dark:text-plum-900">
+                    <span className="grid size-5 shrink-0 place-items-center rounded-full bg-orchid-500 text-white dark:bg-iris-300 dark:text-night-900">
                       <Check className="size-3" />
                     </span>
                   )}

@@ -17,7 +17,7 @@ export function Tabs<T extends string>({
 }) {
   const layoutId = useId();
   return (
-    <div role="tablist" className={cn("inline-flex gap-1 rounded-2xl border border-line bg-surface p-1", className)}>
+    <div role="tablist" className={cn("inline-flex gap-1 glass-thin rounded-2xl border p-1", className)}>
       {tabs.map((tab) => (
         <button
           key={tab.id}
@@ -31,7 +31,7 @@ export function Tabs<T extends string>({
           )}
         >
           {value === tab.id && (
-            <motion.span layoutId={layoutId} className="absolute inset-0 rounded-xl bg-primary" transition={{ type: "spring", duration: 0.4, bounce: 0.15 }} />
+            <motion.span layoutId={layoutId} className="absolute inset-0 rounded-xl bg-brand" transition={{ type: "spring", duration: 0.4, bounce: 0.15 }} />
           )}
           <span className="relative">{tab.label}</span>
         </button>

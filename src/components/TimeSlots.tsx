@@ -40,11 +40,11 @@ export function TimeSlots({ slots, value, onChange }: Props) {
                     aria-pressed={selected}
                     className={cn(
                       "relative h-12 cursor-pointer rounded-2xl border text-[15px] font-medium tabular-nums transition-colors",
-                      selected ? "border-transparent text-primary-fg" : "border-line bg-surface hover:border-blush-300 dark:hover:border-champagne-300/50",
+                      selected ? "border-transparent text-primary-fg" : "glass-thin hover:border-orchid-300 dark:hover:border-iris-300/50",
                     )}
                   >
                     {selected && (
-                      <motion.span layoutId="slot-selected" className="absolute inset-0 rounded-2xl bg-primary shadow-soft" transition={{ type: "spring", duration: 0.35, bounce: 0.2 }} />
+                      <motion.span layoutId="slot-selected" className="absolute inset-0 rounded-2xl bg-brand shadow-soft" transition={{ type: "spring", duration: 0.35, bounce: 0.2 }} />
                     )}
                     <span className="relative">{formatTime(slot.startMin)}</span>
                   </motion.button>
